@@ -2,52 +2,404 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nebo Darlington | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nebo Darlington | Cloud Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="hero">
-      <img src="assets/profile.jpg" alt="Profile Photo" class="profile-pic">
-      <h1>Nebo Darlington</h1>
-      <p>Cloud Engineer | Portfolio</p>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Noise overlay -->
+  <div class="noise"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">ND<span class="dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="mailto:nkemnebo@gmail.com" class="nav-cta">Hire Me</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name reveal">
+        <span class="line">Nebo</span>
+        <span class="line">Darlington</span>
+      </h1>
+      <div class="hero-role reveal">
+        <span>Cloud Engineer</span>
+        <span class="role-divider">·</span>
+        <span>DevOps Architect</span>
+        <span class="role-divider">·</span>
+        <span>Azure &amp; AWS</span>
+      </div>
+      <p class="hero-sub reveal">
+        Building resilient, scalable cloud infrastructure<br>
+        that powers the next generation of applications.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
     </div>
-  </header>
+
+    <div class="hero-avatar reveal">
+      <div class="avatar-ring"></div>
+      <div class="avatar-ring avatar-ring-2"></div>
+      <img src="assets/profile.jpg" alt="Nebo Darlington" class="profile-pic">
+      <div class="avatar-badge">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Certified Expert
+      </div>
+    </div>
+
+    <div class="hero-stats reveal">
+      <div class="stat">
+        <span class="stat-number" data-target="3">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number" data-target="20">0</span><span class="stat-unit">+</span>
+        <span class="stat-label">Projects Delivered</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-number" data-target="2">0</span><span class="stat-unit"></span>
+        <span class="stat-label">Cloud Certifications</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I am a passionate cloud engineer with experience in Azure, AWS, and DevOps practices. I enjoy building scalable solutions and sharing knowledge.</p>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-label reveal">01 — About</div>
+        <div class="about-grid">
+          <div class="about-text">
+            <h2 class="section-title reveal">Passionate about<br><em>cloud architecture</em><br>& automation.</h2>
+            <p class="about-body reveal">
+              I'm a cloud engineer with deep expertise across Azure and AWS, with a strong focus on DevOps practices, CI/CD automation, and infrastructure as code. I enjoy building systems that are not just functional, but elegant and resilient.
+            </p>
+            <p class="about-body reveal">
+              Beyond the technical, I'm passionate about mentoring the next generation of cloud engineers and contributing to a culture of continuous learning.
+            </p>
+            <div class="about-links reveal">
+              <a href="https://linkedin.com/in/darlington" class="social-link" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+              <a href="https://github.com/DarlingtonCloud" class="social-link" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="about-cards reveal">
+            <div class="info-card">
+              <div class="card-icon">☁️</div>
+              <h3>Cloud Architecture</h3>
+              <p>Designing scalable, fault-tolerant systems on Azure and AWS</p>
+            </div>
+            <div class="info-card">
+              <div class="card-icon">⚙️</div>
+              <h3>DevOps & CI/CD</h3>
+              <p>Automating deployment pipelines with GitHub Actions, Docker, and Kubernetes</p>
+            </div>
+            <div class="info-card">
+              <div class="card-icon">🔐</div>
+              <h3>Security & Compliance</h3>
+              <p>Implementing IAM, zero-trust policies, and cloud security best practices</p>
+            </div>
+            <div class="info-card">
+              <div class="card-icon">📊</div>
+              <h3>Monitoring & Observability</h3>
+              <p>Ensuring system health with alerts, dashboards, and logging infrastructure</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <ul>
-        <li><strong>Cloud Engineer</strong> – Company A (2023–Present)</li>
-        <li><strong>DevOps Intern</strong> – Company B (2022)</li>
-      </ul>
+    <!-- Experience Section -->
+    <section id="experience" class="section section-dark">
+      <div class="container">
+        <div class="section-label reveal">02 — Experience</div>
+        <h2 class="section-title reveal">Where I've<br><em>made an impact.</em></h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2023 — Present</div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">Cloud Engineer</h3>
+              <span class="timeline-company">Company A</span>
+              <ul class="timeline-list">
+                <li>Architected and deployed multi-region Azure infrastructure reducing downtime by 40%</li>
+                <li>Led migration of legacy workloads to containerized microservices with Kubernetes</li>
+                <li>Implemented automated CI/CD pipelines cutting release time from days to hours</li>
+                <li>Mentored junior engineers on cloud-native best practices</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>Azure</span><span>Kubernetes</span><span>Terraform</span><span>GitHub Actions</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022</div>
+            <div class="timeline-content">
+              <h3 class="timeline-role">DevOps Intern</h3>
+              <span class="timeline-company">Company B</span>
+              <ul class="timeline-list">
+                <li>Assisted in designing and maintaining CI/CD workflows using Jenkins and GitHub Actions</li>
+                <li>Contributed to Docker containerization of internal services</li>
+                <li>Monitored cloud resource usage and identified cost optimization opportunities</li>
+              </ul>
+              <div class="timeline-tags">
+                <span>AWS</span><span>Docker</span><span>Jenkins</span><span>Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="education-block reveal">
+          <div class="section-label" style="margin-bottom: 2rem;">Education & Certifications</div>
+          <div class="edu-grid">
+            <div class="edu-card">
+              <div class="edu-icon">🎓</div>
+              <div>
+                <h4>B.Sc. Computer Science</h4>
+                <p>University of Nigeria</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-icon">🏅</div>
+              <div>
+                <h4>Microsoft Azure Certified</h4>
+                <p>Azure Solutions Architect</p>
+              </div>
+            </div>
+            <div class="edu-card">
+              <div class="edu-icon">🏅</div>
+              <div>
+                <h4>AWS Certified</h4>
+                <p>AWS Solutions Architect</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <p>Azure • AWS • GitHub • Netlify • CI/CD • Linux</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-label reveal">03 — Skills</div>
+        <h2 class="section-title reveal">Technical<br><em>expertise.</em></h2>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title">Cloud Platforms</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-info"><span>Microsoft Azure</span><span>95%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Amazon AWS</span><span>88%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title">DevOps & Containers</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-info"><span>Docker</span><span>92%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Kubernetes</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>CI/CD Pipelines</span><span>93%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title">Infrastructure & Tools</h3>
+            <div class="skill-bars">
+              <div class="skill-item">
+                <div class="skill-info"><span>Terraform</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Linux / Bash</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>GitHub / GitOps</span><span>95%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-pills reveal">
+          <span class="pill">Azure DevOps</span>
+          <span class="pill">Netlify</span>
+          <span class="pill">Helm</span>
+          <span class="pill">Prometheus</span>
+          <span class="pill">Grafana</span>
+          <span class="pill">Ansible</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">Redis</span>
+          <span class="pill">Nginx</span>
+          <span class="pill">Python</span>
+          <span class="pill">Bash</span>
+          <span class="pill">YAML</span>
+        </div>
+      </div>
     </section>
 
-    <<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    <a href="https://linkedin.com/in/darlington">
-      <img src="assets/linkedin.png" alt="LinkedIn" width="30">
-    </a>
-    <a href="https://github.com/DarlingtonCloud">
-      <img src="assets/github.png" alt="GitHub" width="30">
-    </a>
-  </p>
+    <!-- Projects Section -->
+    <section id="projects" class="section section-dark">
+      <div class="container">
+        <div class="section-label reveal">04 — Projects</div>
+        <h2 class="section-title reveal">Featured<br><em>work.</em></h2>
+        <div class="projects-grid">
+          <div class="project-card reveal featured-project">
+            <div class="project-number">01</div>
+            <div class="project-meta">
+              <span class="project-tag">CI/CD · GitHub Actions</span>
+              <div class="project-links">
+                <a href="https://github.com/DarlingtonCloud" target="_blank" title="View on GitHub">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Automated CI/CD Pipeline</h3>
+            <p>End-to-end deployment automation using GitHub Actions — from code push to production in under 5 minutes, with rollback capabilities and Slack notifications.</p>
+            <div class="project-stack">
+              <span>GitHub Actions</span><span>Docker</span><span>Azure</span><span>Bash</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-number">02</div>
+            <div class="project-meta">
+              <span class="project-tag">Portfolio · Netlify</span>
+              <div class="project-links">
+                <a href="#" title="Live demo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio deployed on Netlify with continuous deployment from GitHub, custom domain, and HTTPS configuration.</p>
+            <div class="project-stack">
+              <span>HTML/CSS</span><span>Netlify</span><span>GitHub</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-number">03</div>
+            <div class="project-meta">
+              <span class="project-tag">Infrastructure · IaC</span>
+            </div>
+            <h3>Cloud Infrastructure as Code</h3>
+            <p>Terraform modules for provisioning multi-environment Azure infrastructure with integrated monitoring and alerting.</p>
+            <div class="project-stack">
+              <span>Terraform</span><span>Azure</span><span>Grafana</span><span>Prometheus</span>
+            </div>
+          </div>
+
+          <div class="project-card reveal">
+            <div class="project-number">04</div>
+            <div class="project-meta">
+              <span class="project-tag">Containers · K8s</span>
+            </div>
+            <h3>Kubernetes Microservices Platform</h3>
+            <p>Containerized microservices architecture with Helm charts, auto-scaling, service mesh, and zero-downtime deployments.</p>
+            <div class="project-stack">
+              <span>Kubernetes</span><span>Helm</span><span>Docker</span><span>AWS EKS</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-label reveal">05 — Contact</div>
+        <div class="contact-inner">
+          <h2 class="section-title reveal">Let's build<br><em>something great.</em></h2>
+          <p class="contact-sub reveal">Open to full-time roles, freelance cloud projects, and collaborations.</p>
+          <a href="mailto:nkemnebo@gmail.com" class="contact-email reveal">
+            <span>nkemnebo@gmail.com</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <div class="contact-socials reveal">
+            <a href="https://linkedin.com/in/darlington" class="contact-social" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/DarlingtonCloud" class="contact-social" target="_blank">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>© 2026 Nebo Darlington</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">ND<span class="dot">.</span></div>
+      <p class="footer-copy">© 2026 Nebo Darlington. Crafted with care.</p>
+      <a href="#hero" class="footer-top">
+        Back to top ↑
+      </a>
+    </div>
   </footer>
 
   <script src="script.js"></script>
